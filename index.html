@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="ca">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guia Flexbox en Català</title>
+    <link rel="stylesheet" href="CSS/estils.css" />
+  </head>
+  <body>
+    <h1>📘 Guia completa de Flexbox en HTML i CSS</h1>
+
+    <h2>🧭 Què és Flexbox?</h2>
+    <p>
+      Flexbox (Flexible Box Layout) és un model de disseny de CSS3 per
+      distribuir espai i alinear elements dins d’un contenidor de forma eficient
+      i flexible.
+    </p>
+
+    <h2>✅ Configuració bàsica</h2>
+    <pre><code>&lt;div class="contenidor"&gt;
+  &lt;div class="element"&gt;1&lt;/div&gt;
+  &lt;div class="element"&gt;2&lt;/div&gt;
+  &lt;div class="element"&gt;3&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+    <pre><code>.contenidor {
+  display: flex;
+}</code></pre>
+
+    <h2>📐 Propietats del contenidor</h2>
+
+    <h3>
+      1.
+      <code>display</code>
+    </h3>
+    <p>
+      <strong>display: flex;</strong>
+      estableix el contenidor com un flex container, activant totes les
+      funcionalitats de Flexbox.
+      <strong>display: inline-flex;</strong>
+      fa el mateix però com a element inline.
+    </p>
+
+    <form id="exmeple1">
+      <textarea name="codehtml" hidden="hidden">
+        &lt;div class="flex-container"&gt;
+  &lt;div class="element"&gt;1&lt;/div&gt;
+  &lt;div class="element"&gt;2&lt;/div&gt;
+  &lt;div class="element"&gt;3&lt;/div&gt;
+&lt;/div&gt;
+      </textarea>
+      <textarea name="codecss" hidden="hidden">
+       .flex-container{
+        display: flex;
+       }
+      </textarea>
+      <button type="submit">Exemple >></button>
+    </form>
+
+    <h3>
+      2.
+      <code>flex-direction</code>
+    </h3>
+    <p>
+      Defineix la direcció principal en què es col·loquen els elements fills
+      dins el contenidor.
+    </p>
+    <ul>
+      <li>
+        <code>row</code>
+        : en fila, de esquerra a dreta (per defecte)
+      </li>
+      <li>
+        <code>row-reverse</code>
+        : en fila, de dreta a esquerra
+      </li>
+      <li>
+        <code>column</code>
+        : en columna, de dalt a baix
+      </li>
+      <li>
+        <code>column-reverse</code>
+        : en columna, de baix a dalt
+      </li>
+    </ul>
+    <form id="exmeple2">
+      <textarea name="codehtml" hidden="hidden">
+        <!--row-->
+        <b>//Exemple row</b>
+        &lt;div class="flex-direction-row flex"&gt;
+  &lt;div class="element"&gt;1&lt;/div&gt;
+  &lt;div class="element"&gt;2&lt;/div&gt;
+  &lt;div class="element"&gt;3&lt;/div&gt;
+&lt;/div&gt;
+      <!--row-reverse-->
+      <hr>
+      <b>//Exemple row reverse</b>
+      &lt;div class="flex-direction-rowreverse flex"&gt;
+  &lt;div class="element"&gt;1&lt;/div&gt;
+  &lt;div class="element"&gt;2&lt;/div&gt;
+  &lt;div class="element"&gt;3&lt;/div&gt;
+&lt;/div&gt;
+<!--column-->
+<hr>
+<b>//Exemple column</b>
+      &lt;div class="flex-direction-column flex"&gt;
+  &lt;div class="element"&gt;1&lt;/div&gt;
+  &lt;div class="element"&gt;2&lt;/div&gt;
+  &lt;div class="element"&gt;3&lt;/div&gt;
+&lt;/div&gt;
+      <!--column-reverse-->
+      <hr>
+<b>//Exemple column reverse</b>
+      &lt;div class="flex-direction-columnreverse flex"&gt;
+  &lt;div class="element"&gt;1&lt;/div&gt;
+  &lt;div class="element"&gt;2&lt;/div&gt;
+  &lt;div class="element"&gt;3&lt;/div&gt;
+&lt;/div&gt;
+      </textarea>
+      <textarea name="codecss" hidden="hidden">
+        /*row*/
+       .flex-direction-row{
+        flex-direction:row;
+       }
+        /*row-reverse*/
+        .flex-direction-rowreverse{
+          flex-direction:row-reverse;
+        }
+
+      /*column*/
+      .flex-direction-column{
+          flex-direction:column;
+      }
+        /*column-reverse*/
+        .flex-direction-columnreverse{
+          flex-direction:column-reverse;
+        }
+
+      </textarea>
+      <button type="submit">Exemple >></button>
+    </form>
+    <h3>
+      3.
+      <code>justify-content</code>
+    </h3>
+    <p>
+      Controla la distribució dels elements al llarg de l’eix principal (definit
+      per
+      <code>flex-direction</code>
+      ).
+    </p>
+    <ul>
+      <li>
+        <code>flex-start</code>
+        : elements alineats a l'inici
+      </li>
+      <li>
+        <code>flex-end</code>
+        : elements alineats al final
+      </li>
+      <li>
+        <code>center</code>
+        : centrats
+      </li>
+      <li>
+        <code>space-between</code>
+        : espai igual entre ells
+      </li>
+      <li>
+        <code>space-around</code>
+        : espai als costats i entre ells
+      </li>
+      <li>
+        <code>space-evenly</code>
+        : espai totalment uniforme
+      </li>
+    </ul>
+
+    <form id="exmeple3">
+      <textarea name="codehtml" hidden="hidden">
+        <!--FLex-start-->
+        <b>//FLex-start</b>
+        &lt;div class="justify-content-fstart flex"&gt;
+  &lt;div class="element"&gt;1&lt;/div&gt;
+  &lt;div class="element"&gt;2&lt;/div&gt;
+  &lt;div class="element"&gt;3&lt;/div&gt;
+&lt;/div&gt;
+      <!--flex-end-->
+      <hr>
+      <b>//flex-end</b>
+      &lt;div class="justify-content-fend flex"&gt;
+  &lt;div class="element"&gt;1&lt;/div&gt;
+  &lt;div class="element"&gt;2&lt;/div&gt;
+  &lt;div class="element"&gt;3&lt;/div&gt;
+&lt;/div&gt;
+<!--center-->
+<hr>
+<b>//center</b>
+      &lt;div class="justify-content-center flex"&gt;
+  &lt;div class="element"&gt;1&lt;/div&gt;
+  &lt;div class="element"&gt;2&lt;/div&gt;
+  &lt;div class="element"&gt;3&lt;/div&gt;
+&lt;/div&gt;
+      <!--space-between-->
+      <hr>
+<b>//space-between</b>
+      &lt;div class="justify-content-sbetween flex"&gt;
+  &lt;div class="element"&gt;1&lt;/div&gt;
+  &lt;div class="element"&gt;2&lt;/div&gt;
+  &lt;div class="element"&gt;3&lt;/div&gt;
+&lt;/div&gt;
+
+
+
+    <!--space-around-->
+    <hr>
+    <b>//space-around</b>
+          &lt;div class="justify-content-sarround flex"&gt;
+      &lt;div class="element"&gt;1&lt;/div&gt;
+      &lt;div class="element"&gt;2&lt;/div&gt;
+      &lt;div class="element"&gt;3&lt;/div&gt;
+    &lt;/div&gt;
+
+    <!--space-evenly-->
+    
+    <hr>
+    <b>//space-evenly</b>
+          &lt;div class="justify-content-sevenly flex"&gt;
+      &lt;div class="element"&gt;1&lt;/div&gt;
+      &lt;div class="element"&gt;2&lt;/div&gt;
+      &lt;div class="element"&gt;3&lt;/div&gt;
+    &lt;/div&gt;
+      </textarea>
+      <textarea name="codecss" hidden="hidden">
+        /*flex-start*/
+       .justify-content-fstart{
+        justify-content:flex-start;
+       }
+        /*flex-end*/
+        .justify-content-fend{
+          justify-content:flex-end;
+        }
+
+      /*center*/
+      .justify-content-center{
+          justify-content:center;
+      }
+        /*space-between*/
+        .justify-content-sbetween{
+          justify-content:space-between;
+        }
+        /*space-around*/
+        .justify-content-sarround{
+          justify-content:space-around;
+        }
+         /*space-evenly*/
+        .justify-content-sevenly{
+          justify-content:space-evenly;
+        }
+        
+
+      </textarea>
+      <button type="submit">Exemple >></button>
+    </form>
+
+    <h3>
+      4.
+      <code>align-items</code>
+    </h3>
+    <p>
+      Defineix l’alineació dels ítems a l’eix perpendicular a l’eix principal.
+    </p>
+    <ul>
+      <li>
+        <code>stretch</code>
+        : s’estiren per omplir l’espai (per defecte)
+      </li>
+      <li>
+        <code>flex-start</code>
+        : alineats a l’inici
+      </li>
+      <li>
+        <code>flex-end</code>
+        : alineats al final
+      </li>
+      <li>
+        <code>center</code>
+        : centrats
+      </li>
+      <li>
+        <code>baseline</code>
+        : alineats segons la línia de base del text
+      </li>
+    </ul>
+    <form id="exmeple4">
+      <textarea name="codehtml" hidden="hidden">
+        <!--align Items-->
+        <!--strecth-->
+       <b>//stretch</b>
+ &lt;div class="align-items-stretch flex"&gt;
+  &lt;div class="element"&gt;1&lt;/div&gt;
+  &lt;div class="element"&gt;2&lt;/div&gt;
+  &lt;div class="element"&gt;3&lt;/div&gt;
+&lt;/div&gt;
+
+ <!--flex start-->
+ <b>// flex start</b>
+&lt;div class="align-items-start flex"&gt;
+  &lt;div class="element"&gt;1&lt;/div&gt;
+  &lt;div class="element"&gt;2&lt;/div&gt;
+  &lt;div class="element"&gt;3&lt;/div&gt;
+&lt;/div&gt;
+
+
+ <!--flex end-->
+ <b>// flex end</b>
+ &lt;div class="align-items-fend flex"&gt;
+  &lt;div class="element"&gt;1&lt;/div&gt;
+  &lt;div class="element"&gt;2&lt;/div&gt;
+  &lt;div class="element"&gt;3&lt;/div&gt;
+&lt;/div&gt;
+
+<!--Center-->
+ <b>//center</b>
+ &lt;div class="align-items-center flex"&gt;
+  &lt;div class="element"&gt;1&lt;/div&gt;
+  &lt;div class="element"&gt;2&lt;/div&gt;
+  &lt;div class="element"&gt;3&lt;/div&gt;
+&lt;/div&gt;
+
+<!--BAse Line-->
+ <b>//base line</b>
+ &lt;div class="align-items-baseline flex"&gt;
+  &lt;div class="element"&gt;1&lt;/div&gt;
+  &lt;div class="element h-75"&gt;2&lt;/div&gt;
+  &lt;div class="element"&gt;3&lt;/div&gt;
+&lt;/div&gt;
+      </textarea>
+      <textarea name="codecss" hidden="hidden">
+        .flex{
+          margin:0;
+          padding:0;
+          height:70px;
+        }
+        .element {
+          margin:0;
+        }
+        /*stretch*/
+       .align-items-stretch{
+        align-items:stretch;
+       }
+       /*flex start*/
+       .align-items-start{
+        align-items: flex-start;
+       }
+       /*flex end*/
+       .align-items-fend {
+        align-items: flex-end;
+       }
+       /*center*/
+       .align-items-center{
+          align-items:center;
+       }
+       .align-items-baseline{
+         align-items:baseline;
+       }
+      </textarea>
+      <button type="submit">Exemple >></button>
+    </form>
+    <h3>
+      5.
+      <code>align-content  --!EN PROCÉS </code>
+    </h3>
+    <p>
+      S’utilitza quan hi ha múltiples files (amb
+      <code>flex-wrap</code>
+      ). Controla l’alineació de les files dins del contenidor.
+    </p>
+
+    <form id="exmeple5">
+      <textarea name="codehtml" hidden="hidden">
+        <!--align Content-->
+        <!--Center-->
+       <b>//Center</b>
+ &lt;div class="align-content-center horizontal border "&gt;
+  &lt;div class="element"&gt;1&lt;/div&gt;
+  &lt;div class="element"&gt;2&lt;/div&gt;
+  &lt;div class="element"&gt;3&lt;/div&gt;
+&lt;/div&gt;
+      </textarea>
+      <textarea name="codecss" hidden="hidden">
+       .align-content-center{
+        flex-wrap:wrap;
+        align-content:center;
+       }
+      </textarea>
+      <button type="submit">Exemple >></button>
+    </form>
+
+    <h3>
+      6.
+      <code>flex-wrap</code>
+    </h3>
+    <p>
+      Permet que els elements es moguin a la següent línia si no hi ha prou
+      espai.
+    </p>
+    <ul>
+      <li>
+        <code>nowrap</code>
+        : tot en una sola línia (per defecte)
+      </li>
+      <li>
+        <code>wrap</code>
+        : els ítems poden saltar a la línia següent
+      </li>
+      <li>
+        <code>wrap-reverse</code>
+        : igual que wrap però invertint l’ordre de les línies
+      </li>
+    </ul>
+
+    <form id="exmeple4">
+      <textarea name="codehtml" hidden="hidden">
+        <!--flex-wrap-->
+        <!--wrap-->
+       <b>//wrap</b>
+ &lt;div class="flex-wrap flex "&gt;
+  &lt;div class="element"&gt;1&lt;/div&gt;
+  &lt;div class="element"&gt;2&lt;/div&gt;
+  &lt;div class="element"&gt;3&lt;/div&gt;
+  &lt;div class="element"&gt;4&lt;/div&gt;
+  &lt;div class="element"&gt;5&lt;/div&gt;
+  &lt;div class="element"&gt;6&lt;/div&gt;
+  &lt;div class="element"&gt;7&lt;/div&gt;
+  &lt;div class="element"&gt;8&lt;/div&gt;
+  &lt;div class="element"&gt;9&lt;/div&gt;
+  &lt;div class="element"&gt;10&lt;/div&gt;
+  &lt;div class="element"&gt;11&lt;/div&gt;
+  &lt;div class="element"&gt;12&lt;/div&gt;
+&lt;/div&gt;
+
+<!--no-wrap-->
+       <b>//no-wrap</b>
+ &lt;div class="flex-no-wrap flex "&gt;
+  &lt;div class="element"&gt;1&lt;/div&gt;
+  &lt;div class="element"&gt;2&lt;/div&gt;
+  &lt;div class="element"&gt;3&lt;/div&gt;
+  &lt;div class="element"&gt;4&lt;/div&gt;
+  &lt;div class="element"&gt;5&lt;/div&gt;
+  &lt;div class="element"&gt;6&lt;/div&gt;
+  &lt;div class="element"&gt;7&lt;/div&gt;
+  &lt;div class="element"&gt;8&lt;/div&gt;
+  &lt;div class="element"&gt;9&lt;/div&gt;
+  &lt;div class="element"&gt;10&lt;/div&gt;
+  &lt;div class="element"&gt;11&lt;/div&gt;
+  &lt;div class="element"&gt;12&lt;/div&gt;
+&lt;/div&gt;
+
+<!--wrap-reverse-->
+       <b>//wrap-reverse</b>
+ &lt;div class="flex-wrap-reverse flex "&gt;
+  &lt;div class="element"&gt;1&lt;/div&gt;
+  &lt;div class="element"&gt;2&lt;/div&gt;
+  &lt;div class="element"&gt;3&lt;/div&gt;
+  &lt;div class="element"&gt;4&lt;/div&gt;
+  &lt;div class="element"&gt;5&lt;/div&gt;
+  &lt;div class="element"&gt;6&lt;/div&gt;
+  &lt;div class="element"&gt;7&lt;/div&gt;
+  &lt;div class="element"&gt;8&lt;/div&gt;
+  &lt;div class="element"&gt;9&lt;/div&gt;
+  &lt;div class="element"&gt;10&lt;/div&gt;
+  &lt;div class="element"&gt;11&lt;/div&gt;
+  &lt;div class="element"&gt;12&lt;/div&gt;
+&lt;/div&gt;
+
+
+
+      </textarea>
+      <textarea name="codecss" hidden="hidden">
+        .flex-wrap{
+          flex-wrap:wrap;
+        }
+       .flex-no-wrap {
+        flex-wrap:no-wrap;
+       }
+       .flex-wrap-reverse{
+        flex-wrap:wrap-reverse;
+       }
+      </textarea>
+      <button type="submit">Exemple >></button>
+    </form>
+
+    <h3>
+      7.
+      <code>gap</code>
+    </h3>
+    <p>Defineix l'espai entre ítems del contenidor té dues propietats (row-gap i column-gap)
+      <ul>
+        <li>
+          <code>row-gap:</code> Afecta a l'espai que hi ha entre files espai en horitzontal
+        </li>
+         <li>
+          <code>column-gap:</code> Afecta a l'espai que hi ha entre columnes espai en vertical
+        </li>
+
+        <li>
+          <code>gap:</code> O en Aquest Cas adjunta les dues propietats el row-gap i el column-gap
+          si poses un valor els dues tenen el mateix valor si posem dos valors cada propietat té un valor 
+          <code>gap:row-gap column-gap;</code>
+        </li>
+      </ul>
+    </p>
+
+    <form id="exmeple7">
+      <textarea name="codehtml" hidden="hidden">
+        <!--gap-->
+    
+       <b>//gap</b>
+ &lt;div class="gap-50 flex"&gt;
+  &lt;div class="element"&gt;1&lt;/div&gt;
+  &lt;div class="element"&gt;2&lt;/div&gt;
+  &lt;div class="element"&gt;3&lt;/div&gt;
+  &lt;div class="element"&gt;1&lt;/div&gt;
+  &lt;div class="element"&gt;2&lt;/div&gt;
+  &lt;div class="element"&gt;3&lt;/div&gt;
+  &lt;div class="element"&gt;1&lt;/div&gt;
+  &lt;div class="element"&gt;2&lt;/div&gt;
+  &lt;div class="element"&gt;3&lt;/div&gt;
+
+  &lt;div class="element"&gt;1&lt;/div&gt;
+  &lt;div class="element"&gt;2&lt;/div&gt;
+  &lt;div class="element"&gt;3&lt;/div&gt;
+
+&lt;/div&gt;
+
+<b>//gap-column</b>
+ &lt;div class="column-gap flex"&gt;
+  &lt;div class="element"&gt;1&lt;/div&gt;
+  &lt;div class="element"&gt;2&lt;/div&gt;
+  &lt;div class="element"&gt;3&lt;/div&gt;
+  &lt;div class="element"&gt;1&lt;/div&gt;
+  &lt;div class="element"&gt;2&lt;/div&gt;
+  &lt;div class="element"&gt;3&lt;/div&gt;
+  &lt;div class="element"&gt;1&lt;/div&gt;
+  &lt;div class="element"&gt;2&lt;/div&gt;
+  &lt;div class="element"&gt;3&lt;/div&gt;
+
+  &lt;div class="element"&gt;1&lt;/div&gt;
+  &lt;div class="element"&gt;2&lt;/div&gt;
+  &lt;div class="element"&gt;3&lt;/div&gt;
+
+&lt;/div&gt;
+
+<b>//row-gap</b>
+ &lt;div class="row-gap flex"&gt;
+  &lt;div class="element"&gt;1&lt;/div&gt;
+  &lt;div class="element"&gt;2&lt;/div&gt;
+  &lt;div class="element"&gt;3&lt;/div&gt;
+  &lt;div class="element"&gt;1&lt;/div&gt;
+  &lt;div class="element"&gt;2&lt;/div&gt;
+  &lt;div class="element"&gt;3&lt;/div&gt;
+  &lt;div class="element"&gt;1&lt;/div&gt;
+  &lt;div class="element"&gt;2&lt;/div&gt;
+  &lt;div class="element"&gt;3&lt;/div&gt;
+
+  &lt;div class="element"&gt;1&lt;/div&gt;
+  &lt;div class="element"&gt;2&lt;/div&gt;
+  &lt;div class="element"&gt;3&lt;/div&gt;
+
+&lt;/div&gt;
+
+
+      </textarea>
+      <textarea name="codecss" hidden="hidden">
+       .gap-50{
+        gap:50px;
+        flex-wrap:wrap;
+       }
+       .column-gap {
+        column-gap:80px;
+        flex-wrap:wrap;
+       }
+
+       .row-gap{
+         row-gap:80px;
+        flex-wrap:wrap;
+       }
+      </textarea>
+      <button type="submit">Exemple >></button>
+    </form>
+
+    <h2>Propietats dels elements (fills)</h2>
+
+    <h3>
+      1.
+      <code>order</code>
+    </h3>
+    <p>
+      Canvia l'ordre visual dels elements dins del contenidor sense alterar
+      l'ordre HTML.
+    </p>
+
+    <h3>
+      2.
+      <code>flex-grow</code>
+    </h3>
+    <p>
+      Defineix la proporció amb què un element pot créixer si hi ha espai
+      disponible.
+    </p>
+
+    <h3>
+      3.
+      <code>flex-shrink</code>
+    </h3>
+    <p>
+      Controla com un element pot reduir la seva mida si no hi ha prou espai.
+    </p>
+
+    <h3>
+      4.
+      <code>flex-basis</code>
+    </h3>
+    <p>
+      Defineix la mida base d’un element abans que s’apliquin les regles de
+      creixement o reducció.
+    </p>
+
+    <h3>
+      5.
+      <code>flex</code>
+      (abreujat)
+    </h3>
+    <p>
+      Combina
+      <code>flex-grow</code>
+      ,
+      <code>flex-shrink</code>
+      i
+      <code>flex-basis</code>
+      en una sola propietat.
+    </p>
+
+    <h3>
+      6.
+      <code>align-self</code>
+    </h3>
+    <p>
+      Sobreescriu
+      <code>align-items</code>
+      per un ítem concret.
+    </p>
+
+  
+  <h2> Joc interactiu</h2>
+  <ul>
+    <li><a href="https://flexboxfroggy.com/" target="_blank">Flexbox Froggy (joc interactiu)</a></li>
+  </ul>
+  
+    <script src="JS/controlex.js"></script>
+  </body>
+</html>

@@ -1,0 +1,82 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+h1 {
+  text-align: center;
+  margin-top: 20px;
+}
+.editor-container {
+  display: flex;
+  height: 80%;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.editor {
+  width: 45%;
+  height: 100%;
+  border: 1px solid #ccc;
+}
+.vista {
+  width: 45%;
+  height: 100%;
+  border: 1px solid #ccc;
+  background-color: #f4f4f4;
+  padding: 10px;
+  box-sizing: border-box;
+  overflow: auto;
+}
+
+.btn-back-edit {
+  background-color: green;
+  color: white;
+  width: 100px;
+  margin-top: 25px;
+  border-style: none;
+  padding: 10px;
+  margin-right: auto;
+  margin-left: auto;
+  text-decoration: none;
+  text-align: center;
+}
+.btn-back-edit > a {
+  color: white;
+}
+
+.flex {
+  display: flex;
+  border: 1px solid black;
+  padding: 10px;
+  margin: 10px;
+}
+.border {
+  border: 1px solid black;
+}
+.p-10 {
+  padding: 10px;
+}
+.m-10 {
+  margin: 10px;
+}
+.horizontal {
+  width: 60px;
+  height: 500px;
+}
+.element {
+  background-color: lightgreen;
+  border: 1px solid black;
+  padding: 10px;
+  margin: 10px;
+  font-size: 20px;
+}
+.h-75 {
+  height: 40px;
+  align-content: center;
+}
+b {
+  color: green;
+}

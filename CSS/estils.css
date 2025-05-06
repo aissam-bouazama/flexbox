@@ -1,0 +1,35 @@
+*,
+*::before,
+*::after {
+  box-sizing: content-box;
+}
+
+
+
+body {
+  font-family: sans-serif;
+  background: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+h1, h2, h3 {
+  color: #005f99;
+}
+
+code {
+  background: #eee;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: monospace;
+}
+
+pre {
+  background: #e8f0fe;
+  padding: 10px;
+  border-radius: 6px;
+  overflow-x: auto;
+}
