@@ -46,5 +46,5 @@ document.addEventListener("DOMContentLoaded", () => {
 ActualitzarVista();
 
 function CrearButton(id) {
-  document.body.innerHTML += `<a class="btn-back-edit" href="index.html#${id}"><< Tornar</a>`;
+  document.body.innerHTML += `<a class="btn-back-edit" href="index.html#${id}"><<</a>`;
 }
