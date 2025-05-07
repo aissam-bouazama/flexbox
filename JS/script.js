@@ -5,6 +5,7 @@ let htmlEditor = CodeMirror(document.getElementById("htmlEditor"), {
   htmlMode: true,
   lineWrapping: true,
 });
+htmlEditor.setSize("100%", "100%");
 
 let cssEditor = CodeMirror(document.getElementById("cssEditor"), {
   mode: "css",
@@ -12,6 +13,7 @@ let cssEditor = CodeMirror(document.getElementById("cssEditor"), {
   lineNumbers: true,
   lineWrapping: true,
 });
+cssEditor.setSize("100%", "100%");
 
 function ActualitzarVista() {
   let htmlContent = htmlEditor.getValue(),
@@ -32,7 +34,7 @@ cssEditor.on("change", ActualitzarVista);
 
 document.addEventListener("DOMContentLoaded", () => {
   const params = new URLSearchParams(window.location.search);
-  const code = params.get("code"),
+  let code = params.get("code"),
     css = params.get("css"),
     id = params.get("id");
 
@@ -46,5 +48,5 @@ document.addEventListener("DOMContentLoaded", () => {
 ActualitzarVista();
 
 function CrearButton(id) {
-  document.body.innerHTML += `<a class="btn-back-edit" href="index.html#${id}"><<</a>`;
+  document.body.innerHTML += `<a class="btn-back-edit" href="index.html#${id}"><< Tornar</a>`;
 }

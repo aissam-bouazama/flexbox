@@ -17,7 +17,8 @@
     </p>
 
     <h2>✅ Configuració bàsica</h2>
-    <pre><code>&lt;div class="contenidor"&gt;
+    <pre><code>
+&lt;div class="contenidor"&gt;
   &lt;div class="element"&gt;1&lt;/div&gt;
   &lt;div class="element"&gt;2&lt;/div&gt;
   &lt;div class="element"&gt;3&lt;/div&gt;
@@ -43,7 +44,7 @@
 
     <form id="exmeple1">
       <textarea name="codehtml" hidden="hidden">
-        &lt;div class="flex-container"&gt;
+&lt;div class="flex-container"&gt;
   &lt;div class="element"&gt;1&lt;/div&gt;
   &lt;div class="element"&gt;2&lt;/div&gt;
   &lt;div class="element"&gt;3&lt;/div&gt;
@@ -87,7 +88,7 @@
       <textarea name="codehtml" hidden="hidden">
         <!--row-->
         <b>//Exemple row</b>
-        &lt;div class="flex-direction-row flex"&gt;
+&lt;div class="flex-direction-row flex"&gt;
   &lt;div class="element"&gt;1&lt;/div&gt;
   &lt;div class="element"&gt;2&lt;/div&gt;
   &lt;div class="element"&gt;3&lt;/div&gt;
@@ -95,7 +96,7 @@
       <!--row-reverse-->
       <hr>
       <b>//Exemple row reverse</b>
-      &lt;div class="flex-direction-rowreverse flex"&gt;
+&lt;div class="flex-direction-rowreverse flex"&gt;
   &lt;div class="element"&gt;1&lt;/div&gt;
   &lt;div class="element"&gt;2&lt;/div&gt;
   &lt;div class="element"&gt;3&lt;/div&gt;
@@ -103,7 +104,7 @@
 <!--column-->
 <hr>
 <b>//Exemple column</b>
-      &lt;div class="flex-direction-column flex"&gt;
+&lt;div class="flex-direction-column flex"&gt;
   &lt;div class="element"&gt;1&lt;/div&gt;
   &lt;div class="element"&gt;2&lt;/div&gt;
   &lt;div class="element"&gt;3&lt;/div&gt;
@@ -111,7 +112,7 @@
       <!--column-reverse-->
       <hr>
 <b>//Exemple column reverse</b>
-      &lt;div class="flex-direction-columnreverse flex"&gt;
+&lt;div class="flex-direction-columnreverse flex"&gt;
   &lt;div class="element"&gt;1&lt;/div&gt;
   &lt;div class="element"&gt;2&lt;/div&gt;
   &lt;div class="element"&gt;3&lt;/div&gt;
@@ -180,7 +181,7 @@
       <textarea name="codehtml" hidden="hidden">
         <!--FLex-start-->
         <b>//FLex-start</b>
-        &lt;div class="justify-content-fstart flex"&gt;
+&lt;div class="justify-content-fstart flex"&gt;
   &lt;div class="element"&gt;1&lt;/div&gt;
   &lt;div class="element"&gt;2&lt;/div&gt;
   &lt;div class="element"&gt;3&lt;/div&gt;
@@ -188,7 +189,7 @@
       <!--flex-end-->
       <hr>
       <b>//flex-end</b>
-      &lt;div class="justify-content-fend flex"&gt;
+&lt;div class="justify-content-fend flex"&gt;
   &lt;div class="element"&gt;1&lt;/div&gt;
   &lt;div class="element"&gt;2&lt;/div&gt;
   &lt;div class="element"&gt;3&lt;/div&gt;
@@ -196,7 +197,7 @@
 <!--center-->
 <hr>
 <b>//center</b>
-      &lt;div class="justify-content-center flex"&gt;
+&lt;div class="justify-content-center flex"&gt;
   &lt;div class="element"&gt;1&lt;/div&gt;
   &lt;div class="element"&gt;2&lt;/div&gt;
   &lt;div class="element"&gt;3&lt;/div&gt;
@@ -204,7 +205,7 @@
       <!--space-between-->
       <hr>
 <b>//space-between</b>
-      &lt;div class="justify-content-sbetween flex"&gt;
+&lt;div class="justify-content-sbetween flex"&gt;
   &lt;div class="element"&gt;1&lt;/div&gt;
   &lt;div class="element"&gt;2&lt;/div&gt;
   &lt;div class="element"&gt;3&lt;/div&gt;
@@ -215,7 +216,7 @@
     <!--space-around-->
     <hr>
     <b>//space-around</b>
-          &lt;div class="justify-content-sarround flex"&gt;
+    &lt;div class="justify-content-sarround flex"&gt;
       &lt;div class="element"&gt;1&lt;/div&gt;
       &lt;div class="element"&gt;2&lt;/div&gt;
       &lt;div class="element"&gt;3&lt;/div&gt;
@@ -225,11 +226,11 @@
     
     <hr>
     <b>//space-evenly</b>
-          &lt;div class="justify-content-sevenly flex"&gt;
+  &lt;div class="justify-content-sevenly flex"&gt;
       &lt;div class="element"&gt;1&lt;/div&gt;
       &lt;div class="element"&gt;2&lt;/div&gt;
       &lt;div class="element"&gt;3&lt;/div&gt;
-    &lt;/div&gt;
+  &lt;/div&gt;
       </textarea>
       <textarea name="codecss" hidden="hidden">
         /*flex-start*/
@@ -600,6 +601,28 @@
       Canvia l'ordre visual dels elements dins del contenidor sense alterar
       l'ordre HTML.
     </p>
+
+      <form id="exmeple1">
+      <textarea name="codehtml" hidden="hidden">
+&lt;div class="flex"&gt;
+  &lt;div class="element e-1"&gt;1&lt;/div&gt;
+  &lt;div class="element e-2"&gt;2&lt;/div&gt;
+  &lt;div class="element e-3"&gt;3&lt;/div&gt;
+&lt;/div&gt;
+      </textarea>
+      <textarea name="codecss" hidden="hidden">
+      .e-1{
+        order:3;
+      }
+      .e-2{
+        order:1;
+      }
+      .e-3{
+        order:2;
+      }
+      </textarea>
+      <button type="submit">Exemple >></button>
+    </form>
 
     <h3>
       2.
