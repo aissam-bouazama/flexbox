@@ -27,6 +27,11 @@ h1 {
     width: 100%;
     height: 100%;
   }
+  .btn-back-edit {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+  }
 }
 .editor {
   width: 45%;
@@ -44,7 +49,7 @@ h1 {
 }
 
 .btn-back-edit {
-  background-color: green;
+  background-color: gray;
   color: white;
   width: 100px;
   margin-top: 25px;

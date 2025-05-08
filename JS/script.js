@@ -38,15 +38,15 @@ document.addEventListener("DOMContentLoaded", () => {
     css = params.get("css"),
     id = params.get("id");
 
-  htmlEditor.setValue(code);
-  cssEditor.setValue(css);
+  htmlEditor.setValue(code || "");
+  cssEditor.setValue(css || "");
 
   if (id != null) {
     CrearButton(id);
   }
+  ActualitzarVista();
 });
-ActualitzarVista();
 
 function CrearButton(id) {
-  document.body.innerHTML += `<a class="btn-back-edit" href="index.html#${id}"><< Tornar</a>`;
+  document.body.innerHTML += `<a class="btn-back-edit" href="index.html#${id}"><img src="imatges/back.svg" alt="back"></a>`;
 }
