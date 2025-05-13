@@ -369,35 +369,53 @@
       </textarea>
       <button type="submit">Exemple >></button>
     </form>
-    <h3>
-      5.
-      <code>align-content  --!EN PROCÉS </code>
-    </h3>
-    <p>
-      S’utilitza quan hi ha múltiples files (amb
-      <code>flex-wrap</code>
-      ). Controla l’alineació de les files dins del contenidor.
-    </p>
+   <h3>
+  6.
+  <code>align-content</code>
+</h3>
+<p>
+  S’utilitza quan hi ha múltiples files (amb
+  <code>flex-wrap</code>). Controla l’alineació de les files dins del contenidor.
+</p>
 
-    <form id="exmeple5">
-      <textarea name="codehtml" hidden="hidden">
-        <!--align Content-->
-        <!--Center-->
-       <b>//Center</b>
- &lt;div class="align-content-center horizontal border "&gt;
+<form id="exemple6">
+  <textarea name="codehtml" hidden="hidden">
+&lt;!-- align-content: center --&gt;
+&lt;div class="flex align-content-center"&gt;
   &lt;div class="element"&gt;1&lt;/div&gt;
   &lt;div class="element"&gt;2&lt;/div&gt;
   &lt;div class="element"&gt;3&lt;/div&gt;
+  &lt;div class="element"&gt;4&lt;/div&gt;
+  &lt;div class="element"&gt;5&lt;/div&gt;
+  &lt;div class="element"&gt;6&lt;/div&gt;
 &lt;/div&gt;
-      </textarea>
-      <textarea name="codecss" hidden="hidden">
-       .align-content-center{
-        flex-wrap:wrap;
-        align-content:center;
-       }
-      </textarea>
-      <button type="submit">Exemple >></button>
-    </form>
+  </textarea>
+  <textarea name="codecss" hidden="hidden">
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  height: 300px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  gap: 10px;
+}
+
+.element {
+  width: 80px;
+  height: 50px;
+  background-color: lightblue;
+  text-align: center;
+  line-height: 50px;
+  font-weight: bold;
+  border: 1px solid #888;
+}
+
+.align-content-center {
+  align-content: center;
+}
+  </textarea>
+  <button type="submit">Exemple >></button>
+</form>
 
     <h3>
       6.
@@ -625,33 +643,106 @@
       <button type="submit">Exemple >></button>
     </form>
 
-    <h3>
-      2.
-      <code>flex-grow</code>
-    </h3>
-    <p>
-      Defineix la proporció amb què un element pot créixer si hi ha espai
-      disponible.
-    </p>
+   <h3>
+  2.
+  <code>flex-grow</code>
+</h3>
+<p>
+  Defineix la proporció amb què un element pot créixer si hi ha espai disponible.
+</p>
+
+<form id="exemple2">
+  <textarea name="codehtml" hidden="hidden">
+&lt;div class="flex"&gt;
+  &lt;div class="element e-1"&gt;1&lt;/div&gt;
+  &lt;div class="element e-2"&gt;2&lt;/div&gt;
+  &lt;div class="element e-3"&gt;3&lt;/div&gt;
+&lt;/div&gt;
+  </textarea>
+  <textarea name="codecss" hidden="hidden">
+
+.e-1 {
+  flex-grow: 1;
+}
+.e-2 {
+  flex-grow: 2;
+}
+.e-3 {
+  flex-grow: 1;
+}
+  </textarea>
+  <button type="submit">Exemple >></button>
+</form>
+
 
     <h3>
-      3.
-      <code>flex-shrink</code>
-    </h3>
-    <p>
-      Controla com un element pot reduir la seva mida si no hi ha prou espai.
-    </p>
+  3.
+  <code>flex-shrink</code>
+</h3>
+<p>
+  Controla com un element pot reduir la seva mida si no hi ha prou espai.
+</p>
 
-    <h3>
-      4.
-      <code>flex-basis</code>
-    </h3>
-    <p>
-      Defineix la mida base d’un element abans que s’apliquin les regles de
-      creixement o reducció.
-    </p>
+<form id="exemple3">
+  <textarea name="codehtml" hidden="hidden">
+&lt;div class="flex"&gt;
+  &lt;div class="element e-1"&gt;1&lt;/div&gt;
+  &lt;div class="element e-2"&gt;2&lt;/div&gt;
+  &lt;div class="element e-3"&gt;3&lt;/div&gt;
+&lt;/div&gt;
+  </textarea>
+  <textarea name="codecss" hidden="hidden">
 
-    <h3>
+.element {
+  width: 100px;
+}
+.e-1 {
+  flex-shrink: 1;
+}
+.e-2 {
+  flex-shrink: 2;
+}
+.e-3 {
+  flex-shrink: 1;
+}
+  </textarea>
+  <button type="submit">Exemple >></button>
+</form>
+
+
+   <h3>
+  4.
+  <code>flex-basis</code>
+</h3>
+<p>
+  Defineix la mida base d’un element abans que s’apliquin les regles de creixement o reducció.
+</p>
+
+<form id="exemple4">
+  <textarea name="codehtml" hidden="hidden">
+&lt;div class="flex"&gt;
+  &lt;div class="element e-1"&gt;1&lt;/div&gt;
+  &lt;div class="element e-2"&gt;2&lt;/div&gt;
+  &lt;div class="element e-3"&gt;3&lt;/div&gt;
+&lt;/div&gt;
+  </textarea>
+  <textarea name="codecss" hidden="hidden">
+
+.e-1 {
+  flex-basis: 50px;
+}
+.e-2 {
+  flex-basis: 100px;
+}
+.e-3 {
+  flex-basis: 150px;
+}
+  </textarea>
+  <button type="submit">Exemple >></button>
+</form>
+
+
+   <!-- <h3>
       5.
       <code>flex</code>
       (abreujat)
@@ -664,17 +755,43 @@
       i
       <code>flex-basis</code>
       en una sola propietat.
-    </p>
+    </p>-->
+<h3>
+  6.
+  <code>align-self</code>
+</h3>
+<p>
+  Sobreescriu
+  <code>align-items</code>
+  per un ítem concret.
+</p>
 
-    <h3>
-      6.
-      <code>align-self</code>
-    </h3>
-    <p>
-      Sobreescriu
-      <code>align-items</code>
-      per un ítem concret.
-    </p>
+<form id="exemple6">
+  <textarea name="codehtml" hidden="hidden">
+&lt;div class="flex"&gt;
+  &lt;div class="element e-1"&gt;1&lt;/div&gt;
+  &lt;div class="element e-2"&gt;2&lt;/div&gt;
+  &lt;div class="element e-3"&gt;3&lt;/div&gt;
+&lt;/div&gt;
+  </textarea>
+  <textarea name="codecss" hidden="hidden">
+.flex {
+  align-items: center;
+  height: 200px;
+}
+.e-1 {
+  align-self: flex-start;
+}
+.e-2 {
+  align-self: center;
+}
+.e-3 {
+  align-self: flex-end;
+}
+  </textarea>
+  <button type="submit">Exemple >></button>
+</form>
+
 
   
   <h2> Joc interactiu</h2>
