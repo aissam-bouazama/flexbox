@@ -4,8 +4,6 @@
   box-sizing: content-box;
 }
 
-
-
 body {
   font-family: sans-serif;
   background: #f4f4f4;
@@ -16,7 +14,9 @@ body {
   margin: auto;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   color: #005f99;
 }
 
@@ -33,7 +33,6 @@ pre {
   border-radius: 6px;
   overflow-x: auto;
 }
-
 
 /* NAVBAR */
 .navbar {
@@ -102,13 +101,13 @@ pre {
   }
 }
 
- .btn-back-edit {
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-  }
-  .btn-back-edit {
-  background-color: gray;
+.btn-back-edit {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+.btn-back-edit {
+  background-color: #005f99;
   color: white;
   width: 100px;
   margin-top: 25px;
