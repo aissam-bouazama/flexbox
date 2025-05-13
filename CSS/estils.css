@@ -106,7 +106,8 @@ pre {
   bottom: 10px;
   right: 10px;
 }
-.btn-back-edit {
+.btn-back-edit,
+.btn {
   background-color: #005f99;
   color: white;
   width: 100px;
