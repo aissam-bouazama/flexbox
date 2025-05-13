@@ -7,17 +7,33 @@
     <link rel="stylesheet" href="CSS/estils.css" />
   </head>
   <body>
+    <nav class="navbar">
+  <div class="brand-title">Guia Flexbox</div>
+  <a  class="toggle-button" onclick="toggleMenu()">
+    &#9776;
+  </a>
+  <div class="navbar-links" id="navbar-links">
+    <ul>
+      <li><a href="#que-es-flexbox">Què és?</a></li>
+      <li><a href="#configuracio">Configuració</a></li>
+      <li><a href="#contenidor">Contenidor</a></li>
+      <li><a href="#elements">Elements</a></li>
+      <li><a href="#joc">Joc</a></li>
+    </ul>
+  </div>
+</nav>
+
       
     <h1>📘 Guia completa de Flexbox en HTML i CSS</h1>
 
-    <h2>Què és Flexbox?</h2>
+    <h2 id="que-es-flexbox">Què és Flexbox?</h2>
     <p>
       Flexbox (Flexible Box Layout) és un model de disseny de CSS3 per
       distribuir espai i alinear elements dins d’un contenidor de forma eficient
       i flexible.
     </p>
 
-    <h2>Configuració bàsica</h2>
+    <h2 id="configuracio">Configuració bàsica</h2>
     <pre><code>
 &lt;div class="contenidor"&gt;
   &lt;div class="element"&gt;1&lt;/div&gt;
@@ -29,7 +45,7 @@
   display: flex;
 }</code></pre>
 
-    <h2>Propietats del contenidor</h2>
+    <h2 id="contenidor">Propietats del contenidor</h2>
 
     <h3>
       1.
@@ -610,7 +626,7 @@
       <button type="submit">Exemple >></button>
     </form>
 
-    <h2>Propietats dels elements (fills)</h2>
+    <h2 id="elements">Propietats dels elements (fills)</h2>
 
     <h3>
       1.
@@ -793,12 +809,19 @@
 </form>
 
 
-  
-  <h2> Joc interactiu</h2>
+  <a class="btn-back-edit" href="#navbar-links"><img src="imatges/up.png" width="24" alt="back"></a>
+
+  <h2 id="joc"> Joc interactiu</h2>
   <ul>
     <li><a href="https://flexboxfroggy.com/" target="_blank">Flexbox Froggy (joc interactiu)</a></li>
   </ul>
-  
+  <script>
+    function toggleMenu() {
+  var navLinks = document.getElementById("navbar-links");
+  navLinks.classList.toggle("active");
+}
+
+    </script>
     <script src="JS/controlex.js"></script>
   </body>
 </html>
